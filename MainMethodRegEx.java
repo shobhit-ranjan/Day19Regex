@@ -1,4 +1,5 @@
-import java.util.regex.Pattern;
+//import java.util.regex.Pattern;
+import java.util.regex.*;
 
 public class MainMethodRegEx {
 
@@ -28,5 +29,14 @@ public class MainMethodRegEx {
 			return regex;
 		}
 
+	}
+
+	public static boolean isValidMobileNo(String str) {
+
+		Pattern ptrn = Pattern.compile("(0/91)?[6-9][0-9]{9}");
+
+		Matcher match = ptrn.matcher(str);
+
+		return (match.find() && match.group().equals(str));
 	}
 }
