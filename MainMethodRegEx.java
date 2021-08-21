@@ -7,7 +7,7 @@ public class MainMethodRegEx {
 
 	public static boolean firstNameValidation(String name) {
 
-		boolean valid = name.matches("(?i)(^[a-z]+)[a-z .,-]((?! .,-)$){1,25}$");
+		boolean valid = name.matches( "[A-Z][a-z]*");
 
 		return valid;
 	}
